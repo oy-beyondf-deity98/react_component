@@ -25,3 +25,4 @@ yarn-error.log*
 # mac
 .idea
 yarn.lock
+package-lock.json
