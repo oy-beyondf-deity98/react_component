@@ -3,7 +3,7 @@ import React from 'react';
 function UserBreadcrumb(props) {
   return (
     <div className={"page-header"}>
-      <div className={"page-block"} style={{margin:"1.5rem 0 2rem"}}>
+      <div className={"page-block"} style={{margin:"0rem 0 2rem"}}>
         <div className={"row"} style={{display:"flex", alignItems:"center", flexWrap:"wrap"}}>
           <div className={"col"} style={{flex:"0 0 50%", maxWidth:"50%"}}>
             <div className={"page-header-title"} style={{fontSize:"1.3rem", fontWeight:"600"}}>

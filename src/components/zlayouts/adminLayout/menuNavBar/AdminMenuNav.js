@@ -15,19 +15,19 @@ function AdminMenuNav(props) {
           <div className={"scrollbar"} style={{height:"calc(100% - 50px)",marginTop:"32px", borderRight:"1px solid #eaeaea", overflow:"hidden", overflowAnchor:"none", touchAction:"auto"}}>
             <ul className={"nav sidenav-inner"} style={{display:"flex", flexDirection:jutis, flexWrap:"wrap", listStyle:"none", marginTop:"32px", paddingLeft:"0", marginBottom:"0", position:"relative"}}>
               <li style={{position:"relative"}}>
-                <a style={{padding:"7px 10px", transition:"all 0.3s ease-in-out", textAlign:"left", margin:"5px 10px", borderRadius:"0.25rem", position:"relative", display:"block", color:"#555"}}>
+                <a href="#" style={{padding:"7px 10px", transition:"all 0.3s ease-in-out", textAlign:"left", margin:"5px 10px", borderRadius:"0.25rem", position:"relative", display:"block", color:"#555"}}>
                   <span className={"micon"}>A</span>
                   <span className={"mtext"}>데이터정책</span>
                 </a>
               </li>
               <li style={{position:"relative"}}>
-                <a style={{padding:"7px 10px", transition:"all 0.3s ease-in-out", textAlign:"left", margin:"5px 10px", borderRadius:"0.25rem", position:"relative", display:"block", color:"#555"}}>
+                <a href="#" style={{padding:"7px 10px", transition:"all 0.3s ease-in-out", textAlign:"left", margin:"5px 10px", borderRadius:"0.25rem", position:"relative", display:"block", color:"#555"}}>
                   <span className={"micon"}>A</span>
                   <span className={"mtext"}>데이터정책</span>
                 </a>
               </li>
               <li style={{position:"relative"}}>
-                <a style={{padding:"7px 10px", transition:"all 0.3s ease-in-out", textAlign:"left", margin:"5px 10px", borderRadius:"0.25rem", position:"relative", display:"block", color:"#555"}}>
+                <a href="#" style={{padding:"7px 10px", transition:"all 0.3s ease-in-out", textAlign:"left", margin:"5px 10px", borderRadius:"0.25rem", position:"relative", display:"block", color:"#555"}}>
                   <span className={"micon"}>A</span>
                   <span className={"mtext"}>데이터정책</span>
                 </a>

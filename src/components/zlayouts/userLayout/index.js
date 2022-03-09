@@ -1,6 +1,6 @@
 import React from 'react';
-import UserMenuNav from "./menuNav/UserMenuNav";
-import UserNavBar from "./header/UserNavBar";
+import UserMenuNav from "./UserMenuNav";
+import UserNavBar from "./UserNavBar";
 import UserBreadcrumb from "./UserBreadcrumb";
 
 function UserLayout(props) {

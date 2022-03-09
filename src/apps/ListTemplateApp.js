@@ -4,7 +4,7 @@ import SearchField from "../components/fields/SearchField";
 import TableLayer from "../components/layers/TableLayer";
 import TableList from "../components/atoms/list/TableList";
 import ListTemplate from "../components/templates/ListTemplate";
-import UserLayout from "../components/layouts/userLayout";
+import UserLayout from "../components/zlayouts/userLayout";
 
 function ListTemplateApp(props) {
   return (

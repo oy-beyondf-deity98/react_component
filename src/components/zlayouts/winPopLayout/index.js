@@ -1,9 +1,9 @@
 import React from 'react';
 
-function UserNavSearch(props) {
+function WinPopLayout(props) {
   return (
     <div></div>
   );
 }
 
-export default UserNavSearch;
+export default WinPopLayout;
