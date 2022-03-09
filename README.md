@@ -22,6 +22,18 @@ stylesheet -> css 파일에 두지 말고.. 각자 페이지로 컴포넌트로 
   3. 예외로 index.js는 소문자로 시작 한다.
 
 ---
+form의 autocomplete, novalidate가 괜찮다.
+  - validation을 검사할수 있다는데... 어떻게 하는 것일까?
+
+input은 특히 더 쓸만한게 많네...
+
+체크박스의 값은 참 오묘한것 같다...
+기본이 true, false여야하는데... value값도 있네?
+checked가 true, false인것 같고... 
+checked와 상관없이 value값이 있는게 신기해, 희안해
+  - indeterminate 속성은 무엇일까? 
+
+---
 
 SI용 컴포넌트 챙기자.
 

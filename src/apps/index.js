@@ -7,7 +7,7 @@ import ListTemplateApp from "./ListTemplateApp";
 
 function DefaultApp() {
   return (
-    <div>처음앱 입니다.</div>
+    <div>처음앱 입니다.로그인을 해야겠죠?</div>
   );
 }
 

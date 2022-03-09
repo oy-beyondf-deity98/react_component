@@ -21,3 +21,7 @@ a {
     color:#6c757d;
     content:"/";
 }
+
+ul {
+    list-style: none;
+}
