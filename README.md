@@ -1,70 +1,64 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SI용 컴포넌트부터 챙긴다...
 
-## Available Scripts
+"flex"가 정말 많이 쓰이네...
+"justifyContent"는 두번째로 쓰인다.
+  - 주로 space-between을 많이 쓴다.
+"alignItems":는 상하의 중앙 정렬을 할때 쓰인다.
+  - 주로 center를 쓴다.
+  - 적용이 되려면 height:100%나 높이가 확보되어야 할수 있다.
 
-In the project directory, you can run:
+"flex-grow, flex-shrink, flex-basis"는 flex가 적용되는 자식항목에 사용이 된다.
 
-### `yarn start`
+flex가 적용된것의 정렬을 위한 방법이 여러개 있다.
+  - [참조](https://velog.io/@jary/flex%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EA%B0%80%EC%9A%B4%EB%8D%B0-%EC%A0%95%EB%A0%AC)
+  - 내가 주로 쓰는 것은 alignItems:center이다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+항목을 4개씩 끝어서 하는 방법은 무엇이 있는가?
+1. 우선은 "flexWrap:wrap"로 지정한다.
+2. 4개씩 끝는 방법은 무엇이 있을까? 고정 크기를 주어야 할까?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `yarn test`
+필드에서는... html5의 element요소를 확인해볼수 있을 것이다.
+  - https://developer.mozilla.org/ko/docs/Web/HTML/Element
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+## 설정 
+1. "create-react-app 앱명"으로 생성
+2. 기본 설치 앱 제거
+   - App.css, App.js, App.test.js, index.css, logo.svg 
+   - public : logo192.png, logo512.png 제거, favicon.ico 다른 것으로 바꾸기...
+3apps 폴더를 기본 폴더로 설정
+4components에 컴포넌트 생성 예정
+5"yarn add react-router-dom"으로 라우트 설정
+   - src/index.js에 BrowserRouter로 묶기
+   - apps/index.js를 기본 앱으로 설정
+   
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
+import Apps from "./apps";
+import {BrowserRouter} from "react-router-dom";
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <Apps />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+reportWebVitals();
 
-### `yarn build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+"yarn add react-router-dom"으로 추가되는 디펜던시 체크
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+info Direct dependencies
+└─ react-router-dom@6.2.2
+info All dependencies
+├─ react-router-dom@6.2.2
+└─ react-router@6.2.2
+✨  Done in 6.45s.

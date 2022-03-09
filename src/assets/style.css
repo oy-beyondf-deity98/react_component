@@ -1,0 +1,23 @@
+body {
+    margin:0px
+}
+
+a {
+    color:#222222;
+    text-decoration: none;
+}
+
+*, *::before, *::after{
+    box-sizing:border-box
+}
+
+.icon-home:before{
+    content:"\e87a"
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+    float:left;
+    padding-right:0.5rem;
+    color:#6c757d;
+    content:"/";
+}
