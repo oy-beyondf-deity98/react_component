@@ -56,7 +56,17 @@ HTML은 상호작용 가능한 사용자 인터페이스 객체를 만들 때 �
 <fieldset>의 display 속성의 값은 기본적으로 block이며, 새로운 블록 서식 맥락을 형성합니다. 인라인형 display 값을 지정하면 inline-block, 그렇지 않으면 block처럼 행동합니다. <fieldset>은 기본 스타일로 콘텐츠를 감싸는 2px 너비의 groove 테두리, 작은 양의 내부 여백, 그리고 min-inline-size: min-content (en-US)를 갖습니다.
 <legend> 요소는 <fieldset>의 블록 시작 방향(대개 위쪽) 테두리 위를 가로지르는 위치에 놓입니다. <legend> 또한 자신의 블록 서식 맥락을 만들며, 너비는 자신의 콘텐츠에 맞춰져 늘어나거나 줄어듭니다. display는 항상 블록형이 됩니다. 즉, display: inline도 block처럼 동작합니다.
 <fieldset>의 콘텐츠는 별도의 익명 상자가 담게 됩니다. 익명 상자는 <fieldset>으로부터 특정 속성을 상속합니다. <fielset>에 display: grid 또는 display: inline-grid를 지정하면 익명 상자는 그리드 서식 맥락을 가지며, display: flex 또는 display: inline-flex를 지정하면 익명 상자가 플렉스 서식 맥락을 갖습니다. 그 외의 경우 블록 서식 맥락입니다.
+  - 한꺼번에 disabled를 할수 있을 것 같다. 
+  - disabled 색을 바꿀수도 있지 않을까?
+  
 form에 있는 유효성을 검증할수 있다는 데 어떻게 하는거지?
+  - 각 입력폼에 required를 넣을수 있는데 이것을 체크하는 것 같다.
+    그러니까.. 빈값을 체크할수 있다는 말이다.
+
+input쪽에서 required를 슬수 있는 것을 체크하는게 좋을 것 같다.
+
+
+
 ```
 form에 대한 속성, 유용하것이 많이 있네?
 ```markdown

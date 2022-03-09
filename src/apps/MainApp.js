@@ -155,7 +155,64 @@ function MainApp(props) {
                     <label htmlFor="music">Music</label>
                 </div>
               </fieldset>
-              <input type="color" value="#ff0000"/>
+              <label htmlFor="colorWell">Color:</label>
+              <input type="color" value="#ff0000" id="colorWell"/>
+
+              <form>
+                <label htmlFor="party">날짜를 선택하세요.
+                  <input type="date" name="party" min="2017-04-01" max="20170430"/>
+                </label>
+              </form>
+              <form>
+                <div>
+                  <label htmlFor="party">Choose your preferred party date and time (required, June 1st 8.30am to June
+                    30th 4.30pm):</label>
+                  <input id="party" type="datetime-local" name="partydate"
+                         min="2017-06-01T08:30" max="2017-06-30T16:30"
+                         pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" required/>
+                    <span className="validity"></span>
+                </div>
+                <div>
+                  <input type="submit" value="Book party!"/>
+                </div>
+                <input type="hidden" id="timezone" name="timezone" value="-08:00"/>
+              </form>
+              <form method="post" encType="multipart/form-data">
+                <div>
+                  <label htmlFor="profile_pic">Choose file to upload</label>
+                  <input type="file" id="profile_pic" name="profile_pic"
+                         accept=".jpg, .jpeg, .png" capture={true} multiple={true}
+
+                  />
+                </div>
+                <div>
+                  <button>Submit</button>
+                </div>
+              </form>
+              <input id="image" type="image" width="100" height="30" alt="Login"
+       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"/>
+              <form>
+                <div>
+                  <label htmlFor="month">What month would you like to visit (June to Sept.)?</label>
+                  <input id="month" type="month" name="month"
+                         min="2022-06" max="2022-09" required/>
+                    <span className="validity"></span>
+                </div>
+                <div>
+                  <input type="submit" value="Submit form"/>
+                </div>
+              </form>
+              <form>
+                <div>
+                  <label htmlFor="balloons">Number of balloons to order (multiples of 10):</label>
+                  <input id="balloons" type="number" name="balloons" step="10" min="0" max="100" required/>
+                    <span className="validity"></span>
+                </div>
+                <input type="number" placeholder="1.0" step="0.01" min="0" max="100" required/>
+                <div>
+                  <input type="submit"/>
+                </div>
+              </form>
             </fieldset>
           </dd>
         </article>

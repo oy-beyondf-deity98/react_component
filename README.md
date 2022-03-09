@@ -25,13 +25,64 @@ stylesheet -> css 파일에 두지 말고.. 각자 페이지로 컴포넌트로 
 form의 autocomplete, novalidate가 괜찮다.
   - validation을 검사할수 있다는데... 어떻게 하는 것일까?
 
+field로 한꺼번에 disabled 할수 있을것 같다.
+  - 상세 화면에서 써먹을수 있을듯
+
+
 input은 특히 더 쓸만한게 많네...
+  - pattern이라는게 있어서 유효성을 체크하네?
+  - required는 빈갑을 체크하고 pattern은 입력값을 체크한다.
+  - 패턴으로도 모둔 유효성을 체크할수 없는 것 같다..
+
+
 
 체크박스의 값은 참 오묘한것 같다...
 기본이 true, false여야하는데... value값도 있네?
 checked가 true, false인것 같고... 
 checked와 상관없이 value값이 있는게 신기해, 희안해
   - indeterminate 속성은 무엇일까? 
+date의 날짜값은 문자로 입력한다. 숫자가 아니다.. 명심하자
+  - 입력값은 YYYY-MM-DD이다. 
+  - pattern으로 모든것을 처리하는게 불가능하다..
+  - 라이브러리를 쓰는게 더 효율적인것 같다.
+  - 2월31일이 입력이 가능하네?
+  - 일반적으로 쓰다가 대체하는게 좋을 것 같다.
+  - 보여주는 패턴을 바꾸는 것도 없어보인다.
+    - 아마도... 로케이션에 영향을 받는 거 같기도 하다.
+file는 파일을 선택하는 요소이다. 
+  - 서버에 올라간 파일을 보여주기 위한것은 따로 만들어서 보여주어야 한다.
+
+input중 에서 list속성을 이용해서 값을 값을 넣어 줄수도 있는 거 같다.
+  - 멀티 선택은 어떻게 할까?
+
+range는... 움직이는 값이 보였으면 좋겠는데?
+
+required와 pattern으로 모두 validtaion체크가 안된다면...
+그냥 모두 처리하는게 나을지도 모르겠다.
+  - 아니면 일반적인것은 처리하고.. 몇가지만 보조하는 식도 괜찮겠지..
+  - required인것을 진짜로 만족하는지 옆에 체크박스를 두어서 시각적으로 체크하게 하는방법도 있다. 
+  - required의 값을 바꿀수 있는 방법도 있다.
+  - 샘플링에만 어울리려나?
+  - 속성에 list가 있으면... 그값중에서 선택을 할수 있는것 같다.
+    - date, 
+  - 패턴에 만족하지 않는다면 css속성으로 제어가 가능하다.
+    - invalid, valid로 제어가 가능하다.
+    - 아래조건 외에도 valid로 넣을수는 없을까?
+  - form에서 [validtaion체크방법을 확인해보자.](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+  - 사용자가 직접 입력되는 값과 서버에서 불려왔을때의 넣었을때 값도 체크해야하다.
+    - 밸리데이션에 맞는지...
+  - form으로 안쓰는 것은 어떻게 되는거지?
+  - form 클릭으로 되면...? rest api는 form을 안쓰지 않나?
+
+```markdown
+validation체크는 아래와 같이 진행한다.
+
+required: Specifies whether a form field needs to be filled in before the form can be submitted.
+minlength and maxlength: Specifies the minimum and maximum length of textual data (strings)
+min and max: Specifies the minimum and maximum values of numerical input types
+type: Specifies whether the data needs to be a number, an email address, or some other specific preset type.
+pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.
+```
 
 ---
 
