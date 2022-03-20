@@ -1,0 +1,28 @@
+.grid-container-main {
+    display: grid;
+    grid-template-columns: 150px auto 250px;
+    grid-template-rows: 100px 300px 70px;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.r-top {
+    grid-area: 1 / 1 / span 1 / span 3;
+    text-align: right;
+}
+.r-left {
+    grid-area: 2 / 1 / span 3 / span 1;
+}
+
+.r-main {
+    grid-area: 2 / 2 / span 2 / span 1;
+    text-align:center;
+    margin: 50px 130px;
+}
+
+.r-popup {
+    float:right;
+    margin:0;
+    line-height:40px;
+}
+
