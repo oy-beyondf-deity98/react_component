@@ -1,16 +1,24 @@
 import React from 'react';
 
 function ListTemplate(props) {
-  const search = props.children[0]
-  const table = props.children[1]
+
+  const searchLayer = props.children[0]
+  const tableLayer = props.children[1]
+  const detailLayer = props.children[2]
+
   return (
     <div className={"container-fluid"} style={{marginLeft:"2px"}}>
       <div style={{height:"10vh", border:"1px solid black", borderRadius:"3px", marginBottom:"50px"}}>
-        {search}
+        {searchLayer}
       </div>
       <div>
-        {table}
+        {tableLayer}
       </div>
+      {detailLayer &&
+        <div>
+          {detailLayer}
+        </div>
+      }
     </div>
   );
 }
