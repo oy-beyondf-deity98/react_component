@@ -3,6 +3,8 @@ layouts 이름을 바꾸자.. t밑 으로 오게...
 
 [a 태그에 대한 고찰](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md)
 
+* table위에 div를 두고 overflow를 둔것은 테이블의 스크롤때문이다. 크기에 따라서... 
+
 index.js는 거의 쓰지 말자.
   - 사용 목적지
     1. 통합 적인 것 (필요 할까?)
