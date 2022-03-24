@@ -4,6 +4,7 @@ import UserNavBar from "./UserNavBar";
 import UserBreadcrumb from "./UserBreadcrumb";
 
 function UserLayout(props) {
+  console.log(props.component())
   return (
     <>
       <UserMenuNav/>

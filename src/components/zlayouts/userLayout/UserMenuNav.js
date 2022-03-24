@@ -1,11 +1,19 @@
 import React from 'react';
+import {menuList} from "../../../../../../apps/admin/5menu/menu_list";
+import {Link} from "react-router-dom";
 
 function UserMenuNav(props) {
   const {menu} = props.menu ||''
   const jutis = "row"
-  if(menu){
 
+  let ul_menu = null;
+  if(menuList){
+    ul_menu = menuList.filter(menu =>menu.name=="root_user")
   }
+
+  console.log(ul_menu)
+
+
   return (
     <nav className={"navbar"}
          style={{position:"fixed", width:"100%", height:"50px", background:"#fff", color: "#535763", display: "block",
@@ -13,9 +21,12 @@ function UserMenuNav(props) {
       <div className={"wrapper"}>
         <div className={"navbar-content"}>
           <ul className={"nav sidenav-inner"} style={{display:"flex", flexDirection:jutis, flexWrap:"wrap", listStyle:"none", marginLeft:"32px"}}>
-            <li style={{marginRight:"1rem"}}>메뉴1</li>
-            <li style={{marginRight:"1rem"}}>메뉴2</li>
-            <li style={{marginRight:"1rem"}}>메뉴3</li>
+            {
+              ul_menu[0].children.map(item =><li key={item.id} style={{marginRight:"1rem"}}><Link to={item.url}>{item.name}</Link></li>)
+            }
+            {/*<li style={{marginRight:"1rem"}}>메뉴1</li>*/}
+            {/*<li style={{marginRight:"1rem"}}>메뉴2</li>*/}
+            {/*<li style={{marginRight:"1rem"}}>메뉴3</li>*/}
           </ul>
         </div>
       </div>

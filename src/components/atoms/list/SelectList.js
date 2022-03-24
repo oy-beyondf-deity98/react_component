@@ -8,7 +8,14 @@ import React from 'react';
  */
 function SelectList(props) {
   return (
-    <div></div>
+    <select>
+      {
+        props.optionList ?
+        props.optionList.map(item =><option value={item.value}>{item.label}</option>)
+          :<option value={""} placeholder={"No Data"}>No Data</option>
+      }
+    </select>
+
   );
 }
 

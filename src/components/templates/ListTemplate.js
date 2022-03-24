@@ -4,7 +4,10 @@ function ListTemplate(props) {
 
   const searchLayer = props.children[0]
   const tableLayer = props.children[1]
-  const detailLayer = props.children[2]
+  let detailLayer = null
+  if(props.children && props.children.length >2){
+    detailLayer = props.children[2]
+  }
 
   return (
     <div className={"container-fluid"} style={{marginLeft:"2px"}}>
