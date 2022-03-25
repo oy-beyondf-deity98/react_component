@@ -4,7 +4,7 @@ import AdminNavBar from "./headerBar/AdminNavBar";
 import AdminMenuNav from "./menuNavBar/AdminMenuNav";
 
 function AdminLayout(props) {
-
+  console.log(props.component)
   return (
     <>
       <AdminMenuNav/>

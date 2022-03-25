@@ -1,6 +1,16 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 
 function UserNavBar(props) {
+  // const {history} = useHistory()
+  let navigate = useNavigate();
+
+  const goAdmin = () =>{
+    console.log("goAdmin")
+    //히스토리 push 보내기
+    // history.push("/user_manage");
+    navigate("/user_manage")
+  }
   return (
     <header style={{display:"flex", position:"fixed", top:"0", width:"100%", minHeight:"50px", height:"50px", background:"#4680ff", color:"rgba(255,255,255, 0.8"}}>
       <div className={"logo"} style={{display:"inline-flex", justifyContent:"center",alignItems:"center", width:"100px", position:"relative",  padding: "0 25px"}}>
@@ -23,7 +33,7 @@ function UserNavBar(props) {
             <button style={{background: "#000000", color: "#fff", border: "1px solid #000000", opacity: "0.5", height:"33px", padding:"0 10px"}}>검색</button>
           </li>
           <li style={{paddingLeft:"5px"}}>
-            <button style={{background: "#000000", color: "#fff", border: "1px solid #000000", opacity: "0.5", height:"33px", padding:"0 10px"}}>admin</button>
+            <button style={{background: "#000000", color: "#fff", border: "1px solid #000000", opacity: "0.5", height:"33px", padding:"0 10px"}} onClick={goAdmin}>admin</button>
           </li>
           <li style={{paddingLeft:"5px", paddingRight:"25px"}}>
             <button style={{background: "#000000", color: "#fff", border: "1px solid #000000", opacity: "0.5", height:"33px", padding:"0 10px"}}>로그아웃</button>

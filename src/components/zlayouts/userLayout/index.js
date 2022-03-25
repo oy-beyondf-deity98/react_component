@@ -4,7 +4,6 @@ import UserNavBar from "./UserNavBar";
 import UserBreadcrumb from "./UserBreadcrumb";
 
 function UserLayout(props) {
-  console.log(props.component())
   return (
     <>
       <UserMenuNav/>
@@ -16,7 +15,7 @@ function UserLayout(props) {
               <UserBreadcrumb/>
               <div className={"main-body"}>
                 <div className={"page-wrapper"}>
-                  {props.children}
+                  {props.component()}
                 </div>
               </div>
             </div>
