@@ -12,7 +12,7 @@ a {
 }
 
 .icon-home:before{
-    content:"\e87a"
+    content:"\2721"
 }
 
 .breadcrumb-item + .breadcrumb-item::before{

@@ -1,9 +1,10 @@
 import React from 'react';
-import RightEndLayer from "./RightEndLayer";
 
 const BothEndLayer = (props) => {
   const left = props.children[0]
   const right = props.children[1]
+
+  console.log('BothEndLayer')
   return (
     <div style={{display:"flex", justifyContent:"space-between"}}>
       <div>

@@ -1,0 +1,36 @@
+/*!* IE의 경우, 10까지만 적용 *!*/
+/*input::-ms-clear,*/
+/*input::-ms-reveal{*/
+/*    display:none;*/
+/*}*/
+/*!* 크롬의 경우 *!*/
+/*input::-webkit-search-decoration,*/
+/*input::-webkit-search-cancel-button,*/
+/*input::-webkit-search-results-button,*/
+/*input::-webkit-search-results-decoration{*/
+/*    display:none;*/
+/*}*/
+
+.inputWrap {
+    position: relative;
+    height: 30px;
+    display: inline-block;
+}
+
+.inputWrap input {
+    padding-right: 30px;
+    height: inherit;
+}
+
+.inputWrap .btnClear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: inherit;
+    background: center no-repeat;
+    background-sizee: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

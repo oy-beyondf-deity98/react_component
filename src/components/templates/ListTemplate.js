@@ -11,7 +11,7 @@ function ListTemplate(props) {
 
   return (
     <div className={"container-fluid"} style={{marginLeft:"2px"}}>
-      <div style={{height:"10vh", border:"1px solid black", borderRadius:"3px", marginBottom:"50px"}}>
+      <div style={{height:"5vh", border:"1px solid black", borderRadius:"3px", marginBottom:"50px"}}>
         {searchLayer}
       </div>
       <div>

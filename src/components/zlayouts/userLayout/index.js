@@ -3,7 +3,10 @@ import UserMenuNav from "./UserMenuNav";
 import UserNavBar from "./UserNavBar";
 import UserBreadcrumb from "./UserBreadcrumb";
 
+//TODO 하위에 있는 props.component()에서 변경되었는데.. 여기까지 나오는 것일까? props.compoennt()가 함수여서 그런걸까?
+
 function UserLayout(props) {
+  console.log('layout',props)
   return (
     <>
       <UserMenuNav/>
@@ -26,4 +29,4 @@ function UserLayout(props) {
   );
 }
 
-export default UserLayout;
+export default React.memo(UserLayout);

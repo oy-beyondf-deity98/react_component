@@ -1,6 +1,7 @@
 import React from 'react';
 
-function UserBreadcrumb(props) {
+function UserBreadcrumb() {
+  console.log('breadcrumb')
   return (
     <div className={"page-header"}>
       <div className={"page-block"} style={{margin:"0rem 0 2rem"}}>
@@ -13,7 +14,7 @@ function UserBreadcrumb(props) {
           <div className={"col"} style={{flex:"0 0 50%", maxWidth:"50%"}}>
             <ul className={"breadcrumb"} style={{display:"flex", flexWrap:"wrap",justifyContent:"end", padding:0,marginBottom:0, listStyle:"none", borderRadius:"0.25rem"}}>
               <li className={"breadcrumb-item"}>
-                <i className={"icon-hone"}></i>
+                <i className={"icon-home"}></i>
               </li>
               <li className={"breadcrumb-item"}>
                 <a href={"/main"}>품질그룹관리</a>
@@ -26,4 +27,4 @@ function UserBreadcrumb(props) {
   );
 }
 
-export default UserBreadcrumb;
+export default React.memo(UserBreadcrumb);

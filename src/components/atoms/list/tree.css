@@ -1,0 +1,38 @@
+ul {
+    list-style: none;
+}
+
+.tree input[type="checkbox"]:checked~ul {
+    display: none;
+}
+
+.tree input[type="checkbox"] {
+    display:none;
+}
+
+/*.tree *:before{*/
+/*    width:10px;*/
+/*    height:20px;*/
+/*    display: inline-block;*/
+/*}*/
+
+.tree *:before {
+    width:17px;
+    height:20px;
+    display:inline-block;
+}
+
+.tree .child:before {
+    content:"\21C4";
+    font-family:fontello;
+}
+
+/*.tree .no-child:before {*/
+/*    content:"\22EE";*/
+/*    font-family:fontello;*/
+/*}*/
+
+
+.tree ul{
+    padding-left:20px
+}

@@ -36,6 +36,7 @@ const getFieldProp = (props) =>{
 
     if(list && list.length > 0){
       list.forEach((item,index) =>{
+        console.log(item)
         const key = `${index}`
         if(props.rowClick){
           data.push(<tr key={key} onClick={() => handleRowClick(item, props.rowClick)}>{getTableItem(cChildren,item)}</tr>)
@@ -45,7 +46,7 @@ const getFieldProp = (props) =>{
 
       })
     }else{
-      data.push(<tr><td colSpan={cChildren.length}>No Data</td></tr>)
+      data.push(<tr key={0}><td colSpan={cChildren.length}>No Data</td></tr>)
     }
   }
 
@@ -57,7 +58,9 @@ const getFieldProp = (props) =>{
 function TableList(props) {
 
   const {header,data} = getFieldProp(props);
-  const height = "500px"
+  // const height = "500px"
+
+  console.log('TableList')
   return (
     <div style={{width:"100%", height:"500px", overflow:"auto"}}>
       {/*나중에 colgroup도 넣자. width값이 있을때 이야기이다.*/}

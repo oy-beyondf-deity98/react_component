@@ -1,3 +1,53 @@
+
+form으로 submit는 엔터이벤트에 매력이 많다.
+또한 reset버튼으로 전체 클리어가 가능하다는 점도 마음에 든다.
+form의 의도는 명확한것 같다. 보고서를 작성하고, 제출한다.
+  - 그래서 페이지 이동이 기본적으로 되어있다. 
+  - 이벤트에서 페이지 이동이 있을경우 페이지 이동이 되지만.. 그외에는 자기 자신을 리로딩 한다.
+  - 왜인지 form에 있는 button의 `type={"button"}`을 달면 엔터와 벨리데이션 모두 안된다.
+  - form에 있는 페이지 로딩은 하고 싶지 않을때는 enter이벤트만 쓸수도 있다.
+  - onSubmit에 `e.preventDefault()`를 넣으면 된다.
+
+* form의 페이지 리로딩 없이 validtaion 체크만 하는 것은 없는 것 같다. 불행히도...
+  - 엔터이벤트만 쓰려면 form은 훌륭하다.
+  - 어차피 상세에서 조회를 위해 페이지 리로딩이 필요하므로 같이 써먹어도 될것 같다.
+  - 의외로 페이지 깜박임을 싫어하는 경우가 많다. 그래서... 엔터만 써먹는 경우가 많을 것 같다.
+  - validation 체크가 안되는것 은 아쉽지만 페이지 깜박임은 참기 힘들다. ㅎㅎㅎ
+
+
+---
+import한 순간 그 컴포넌트는 참조 된다. import한 것을 사용한 순간이 아니다...
+
+리액트의 css 모듈은 따로 라이브러리를 넣지 않아도 쓸수 있다.
+  - 단점은 빌드하면 css가 나뉘어서 보인다는 것입니다.
+  - 범위가 현재 컴포넌트로 하고 싶었지만 그렇게 되지는 않는다. 그냥 css import한거 랑 비슷하다.
+  - css랑 다른점은 변수처럼 쓸수 있다는 것 정도? 별다른 이점은 없는 것같다.
+sass도 마찬가지이다. 하지만 라이브러리를 설치해 주어야 한다.
+  - 대신에 컴파일하면 css파일과 나누지 않고, js에 같이 있게 됩니다.
+  - js내에 생성되기 때문에 현재 컴포넌트만 적용할수 있는 것 가타.
+  - 따로 실험은 안해봤다.
+라이브러리를 사용하는 김에 styled-components를 사용하는 방법도 있습니다.
+라이브러리를 따로 쓸바에는 styled-components를 쓰는게 낳지 않을까 합니다.
+
+
+search 에 다음과 같은 옵션을 넣으면 clear버튼이 없어진다.
+꺼꾸로 없어지는 것을 방지하기 위해서 알아두어야 한다.
+```css
+/* IE의 경우, 10까지만 적용 */
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+/* 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+```
+---
+
 layouts 이름을 바꾸자.. t밑 으로 오게... 
   - 예제군 : views, 
 

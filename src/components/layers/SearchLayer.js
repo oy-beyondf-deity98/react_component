@@ -12,11 +12,12 @@ import SelectList from "../atoms/list/SelectList";
 function SearchLayer({handlerSearch,children,...rest}) {
   return (
     <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", height:"100%"}}>
-      <form onSubmit={handlerSearch}>
+      <div>
+      {/*<form onSubmit={handlerSearch}>*/}
         <div style={{display:"flex", flexWrap:"wrap", paddingRight:"10px"}}>
           {children}
         </div>
-      </form>
+      </div>
       <div style={{width:"10%", paddingLeft:"10px"}}>
         <button>검색</button>
       </div>

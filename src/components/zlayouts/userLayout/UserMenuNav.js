@@ -2,16 +2,16 @@ import React from 'react';
 import {menuList} from "../../../../../../apps/admin/5menu/menu_list";
 import {Link} from "react-router-dom";
 
-function UserMenuNav(props) {
-  const {menu} = props.menu ||''
+function UserMenuNav() {
+  // const {menu} = props.menu ||''
   const jutis = "row"
 
   let ul_menu = null;
   if(menuList){
-    ul_menu = menuList.filter(menu =>menu.name=="root_user")
+    ul_menu = menuList.filter(menu =>menu.name==="root_user")
   }
 
-  console.log(ul_menu)
+  console.log('메뉴리스트 출력 횟수',ul_menu)
 
 
   return (
@@ -35,4 +35,4 @@ function UserMenuNav(props) {
   );
 }
 
-export default UserMenuNav;
+export default React.memo(UserMenuNav);
