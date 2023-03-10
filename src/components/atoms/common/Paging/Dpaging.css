@@ -1,0 +1,12 @@
+.page-link{
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: 0;
+    line-height: 1.25;
+    color:#222222;
+    background-color: #fff;
+    border: 0 solid #dee2e6;
+    border-radius: 60px;
+    margin: 0 5px;
+}

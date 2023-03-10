@@ -1,0 +1,21 @@
+.simple-paging-button{
+    position:relative;
+    display: block;
+    user-select: none;
+    border:none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    cursor: pointer;
+    color:rgba(0,0,0,.54);
+    fill:rgba(0,0,0,.54);
+    background:transparent;
+}
+
+/*디스플레이일때 적용한다.*/
+.simple-paging-button:disabled{
+    cursor:unset;
+    color:rgba(0,0,0,.18);
+    fill:rgba(0,0,0,.18);
+}
